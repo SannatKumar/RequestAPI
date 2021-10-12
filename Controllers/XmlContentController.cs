@@ -42,5 +42,13 @@ namespace RequestAPI.Controllers
             }
             return XmlContentModel;
         }
+
+        [HttpPost]
+        public  ActionResult<IEnumerable<XmlContentModel>> PostContentList(XmlContentModel ContentList)
+        {
+            XmlContentList.Add(ContentList);
+            return XmlContentList;
+
+        }
     }
 }
