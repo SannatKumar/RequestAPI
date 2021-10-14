@@ -24,6 +24,7 @@ namespace RequestAPI.Controllers
         {
 
 
+
             return XmlContentList;
         }
         /*
@@ -44,17 +45,7 @@ namespace RequestAPI.Controllers
         [HttpPost]
         public  ActionResult<IEnumerable<ActiveCMSMonitor>> PostContentList(ActiveCMSMonitor ContentList)
         {
-            ActiveCMSMonitor eventOne = new ActiveCMSMonitor
-            {
-                MonitorEvent = ContentList.MonitorEvent,
-                Folder = ContentList.Folder,
-                Filter = ContentList.Filter,
-                Action = ContentList.Action,
-                Property = ContentList.Property,
-                Query = ContentList.Query,
-            };
-
-            //eventOne.Save("my-conf-examples.xml");
+            
             XmlContentList.Add(ContentList);
             return XmlContentList;
 
