@@ -52,7 +52,8 @@ namespace RequestAPI
                 .WithOrigins("http://localhost:3000")
                 .AllowAnyMethod()
                 .AllowCredentials()
-                .WithHeaders("Accept", "Content-Type", "Origin", "X-My-Header"));
+                .AllowAnyHeader());
+            //.WithHeaders("Accept", "Content-Type", "Origin", "X-My-Header"));
 
             app.UseAuthorization();
 
